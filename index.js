@@ -59,21 +59,19 @@ instance.prototype.config_fields = function () {
 	var self = this;
 	return [
 		{
-			type:  'text',
-			id:    'info',
-			width: 12,
-			label: 'Information',
-			value: 'This module controls an itac IP2IR device by <a href="https://www.globalcache.com/products/itach/ip2irspecs/" target="_new">Global Cache</a>.'
-		},
-	]
-	return [
-		{
 			type:  'textinput',
 			id:    'host',
 			label: 'Device IP',
 			width: 12,
 			regex: self.REGEX_IP
 		},
+		{
+			type:  'text',
+			id:    'info',
+			width: 12,
+			label: 'Information',
+			value: 'This module controls an itac IP2IR device by <a href="https://www.globalcache.com/products/itach/ip2irspecs/" target="_new">Global Cache</a>.'
+		}
 	]
 };
 
