@@ -97,8 +97,7 @@ instance.prototype.actions = function(system) {
 				{
 					 type:    'textinput',
 					 label:   'ir code',
-					 id:      'ir',
-					 default: 'ir_code'
+					 id:      'ir'
 				}
 			]
 	},

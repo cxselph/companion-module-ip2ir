@@ -1,6 +1,6 @@
 {
   "name": "gc-itac-ir",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Module to control devices through a Global Cache iTac IP2IR infrared interface.",
   "main": "index.js",
   "scripts": {
