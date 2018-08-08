@@ -91,38 +91,26 @@ instance.prototype.actions = function(system) {
 	var self = this;
 	self.system.emit('instance_actions', self.id, {
 
-		'portOne':       {
-			label: 'Port 1',
+		'portSet':    {
+			label: 'Choose port',
 			options: [
-				{
-					 type:    'textinput',
-					 label:   'ir code',
-					 id:      'ir'
-				}
+					{
+						type:   'dropdown',
+						label:  'Choose Port',
+						id:     'portNum',
+						choices:	[
+							{ id: '1,',		label: 'Port 1' },
+							{ id: '2,',		label: 'Port 2' },
+							{ id: '3,',		label: 'Port 3' }
+						]
+					},
+					{
+						type:    'textinput',
+						label:   'ir code',
+						id:      'ir'
+					}
 			]
-	},
-		'portTwo':          {
-			label: 'Port 2',
-			options: [
-				{
-					 type:    'textinput',
-					 label:   'ir code',
-					 id:      'ir',
-					 default: 'ir_code'
-				}
-			]
-	},
-		'portThree':         {
-			label: 'Port 3',
-			options: [
-				{
-					 type:    'textinput',
-					 label:   'ir code',
-					 id:      'ir',
-					 default: 'ir_code'
-				}
-			]
-		}
+		},
 	});
 }
 
@@ -133,17 +121,10 @@ instance.prototype.action = function(action) {
 
 	switch (action.action) {
 
-		case 'portOne':
-			cmd += '1,1,' + action.options.ir;
+		case 'portSet':
+			cmd += opt.portNum + opt.ir;
 			break;
 
-		case 'portTwo':
-			cmd += '2,1,' + action.options.ir;
-			break;
-
-		case 'portThree':
-			cmd += '3,1,' + action.options.ir;
-			break;
 	}
 
 	if (cmd !== undefined) {
