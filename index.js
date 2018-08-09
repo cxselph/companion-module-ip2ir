@@ -146,7 +146,7 @@ instance.prototype.action = function(action) {
 
 instance.module_info = {
 	label:   'Global Cache - iTach IP2IR',
-	id:      'gc-itac-ir',
+	id:      'globalcache-itac-ir',
 	version: '0.0.1'
 };
 
