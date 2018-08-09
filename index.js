@@ -98,6 +98,7 @@ instance.prototype.actions = function(system) {
 						type:   'dropdown',
 						label:  'Choose Port',
 						id:     'portNum',
+						width:  12,
 						choices:	[
 							{ id: '1,',		label: 'Port 1' },
 							{ id: '2,',		label: 'Port 2' },
@@ -107,7 +108,8 @@ instance.prototype.actions = function(system) {
 					{
 						type:    'textinput',
 						label:   'ir code',
-						id:      'ir'
+						id:      'ir',
+						width:   12
 					}
 			]
 		},
