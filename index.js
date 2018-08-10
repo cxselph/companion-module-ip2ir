@@ -107,9 +107,10 @@ instance.prototype.actions = function(system) {
 					},
 					{
 						type:    'textinput',
-						label:   'ir code',
+						label:   'IR Code',
 						id:      'ir',
-						width:   12
+						width:   12,
+						regex:   '/^\\d+(,\\d+)+$/'
 					}
 			]
 		},
@@ -124,7 +125,7 @@ instance.prototype.action = function(action) {
 	switch (action.action) {
 
 		case 'portSet':
-			cmd += opt.portNum + opt.ir;
+			cmd += opt.portNum + '1,' + opt.ir;
 			break;
 
 	}
